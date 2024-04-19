@@ -1,12 +1,12 @@
-﻿@model IEnumerable<Actor>
+﻿@model IEnumerable<Producer>
 
 @{
-    ViewData["Title"] = "List of Actors";
+    ViewData["Title"] = "List of Producers";
 }
 
 <div class="row">
     <div class="col-md-8 offset-md-2">
-        
+
         <table class="table">
             <thead>
                 <tr class="text-center">
@@ -17,7 +17,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach(var item in Model)
+                @foreach (var item in Model)
                 {
                     <tr>
                         <td class="align-middle">
@@ -25,8 +25,9 @@
                         </td>
                         <td class="align-middle">
                             @Html.DisplayFor(modelItem => item.FullName)
-                            </td>
-                        <td class="align-middle">'
+                        </td>
+                        <td class="align-middle">
+                            '
                             @Html.DisplayFor(modelItem => item.Bio)
                         </td>
                         <td class="align-middle">
