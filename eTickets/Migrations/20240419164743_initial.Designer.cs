@@ -12,8 +12,8 @@ using eTickets.Data;
 namespace eTickets.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240419105247_Initial")]
-    partial class Initial
+    [Migration("20240419164743_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,7 +39,8 @@ namespace eTickets.Migrations
 
                     b.Property<string>("FullName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("ProfilePictureUrl")
                         .IsRequired()
@@ -184,7 +185,7 @@ namespace eTickets.Migrations
             modelBuilder.Entity("eTickets.Models.Movie", b =>
                 {
                     b.HasOne("eTickets.Models.Cinema", "Cinema")
-                        .WithMany()
+                        .WithMany("Movies")
                         .HasForeignKey("CinemaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -203,6 +204,11 @@ namespace eTickets.Migrations
             modelBuilder.Entity("eTickets.Models.Actor", b =>
                 {
                     b.Navigation("Actors_Movies");
+                });
+
+            modelBuilder.Entity("eTickets.Models.Cinema", b =>
+                {
+                    b.Navigation("Movies");
                 });
 
             modelBuilder.Entity("eTickets.Models.Movie", b =>
