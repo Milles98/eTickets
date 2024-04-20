@@ -1,9 +1,10 @@
 ﻿using eTickets.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace eTickets.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<ApplicationUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -11,18 +12,15 @@ namespace eTickets.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Actor_Movie>()
-                .HasKey(am => new { am.ActorId, am.MovieId });
+            modelBuilder.Entity<Actor_Movie>().HasKey(am => new
+            {
+                am.ActorId,
+                am.MovieId
+            });
 
-            modelBuilder.Entity<Actor_Movie>()
-                .HasOne(m => m.Movie)
-                .WithMany(am => am.Actors_Movies)
-                .HasForeignKey(m => m.MovieId);
+            modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Movie).WithMany(am => am.Actors_Movies).HasForeignKey(m => m.MovieId);
+            modelBuilder.Entity<Actor_Movie>().HasOne(m => m.Actor).WithMany(am => am.Actors_Movies).HasForeignKey(m => m.ActorId);
 
-            modelBuilder.Entity<Actor_Movie>()
-                .HasOne(m => m.Actor)
-                .WithMany(am => am.Actors_Movies)
-                .HasForeignKey(m => m.ActorId);
 
             base.OnModelCreating(modelBuilder);
         }
@@ -34,5 +32,9 @@ namespace eTickets.Data
         public DbSet<Producer> Producers { get; set; }
 
 
+        //Orders related tables
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
     }
 }
