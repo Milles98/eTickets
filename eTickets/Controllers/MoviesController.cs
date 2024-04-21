@@ -1,7 +1,7 @@
 ﻿using eTickets.Data;
-using eTickets.Data.Services;
 using eTickets.Models;
 using eTickets.ViewModels;
+using Library.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;

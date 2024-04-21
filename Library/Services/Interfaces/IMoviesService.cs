@@ -2,7 +2,7 @@
 using eTickets.Models;
 using eTickets.ViewModels;
 
-namespace eTickets.Data.Services
+namespace Library.Services.Interfaces
 {
     public interface IMoviesService : IEntityBaseRepository<Movie>
     {
