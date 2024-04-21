@@ -22,33 +22,33 @@ namespace eTickets.Data
                     {
                         new Cinema()
                         {
-                            Name = "Cinema 1",
+                            Name = "Penn Cinema",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-1.jpeg",
-                            Description = "This is the description of the first cinema"
+                            Description = "See our movies in highest quality using IMAX"
                         },
                         new Cinema()
                         {
-                            Name = "Cinema 2",
+                            Name = "Movie House",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-2.jpeg",
-                            Description = "This is the description of the first cinema"
+                            Description = "Oldest Cinema. We serve KFC and beers!"
                         },
                         new Cinema()
                         {
                             Name = "Cinema 3",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-3.jpeg",
-                            Description = "This is the description of the first cinema"
+                            Description = "Newest cinema on the block. Give it a try"
                         },
                         new Cinema()
                         {
-                            Name = "Cinema 4",
+                            Name = "State Cinema",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-4.jpeg",
-                            Description = "This is the description of the first cinema"
+                            Description = "Owned by the government. Always expensive."
                         },
                         new Cinema()
                         {
-                            Name = "Cinema 5",
+                            Name = "Nazareth Cinema",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-5.jpeg",
-                            Description = "This is the description of the first cinema"
+                            Description = "Has all the scary movies you dare to watch."
                         },
                     });
                     context.SaveChanges();
@@ -60,33 +60,33 @@ namespace eTickets.Data
                     {
                         new Actor()
                         {
-                            FullName = "Actor 1",
-                            Bio = "This is the Bio of the first actor",
+                            FullName = "Matt LeBlanc",
+                            Bio = "One of the stars of Friends",
                             ProfilePictureUrl = "http://dotnethow.net/images/actors/actor-1.jpeg"
 
                         },
                         new Actor()
                         {
-                            FullName = "Actor 2",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Chris Tucker",
+                            Bio = "Famous for Rush Hour and much more",
                             ProfilePictureUrl = "http://dotnethow.net/images/actors/actor-2.jpeg"
                         },
                         new Actor()
                         {
-                            FullName = "Actor 3",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Angelina Jolie",
+                            Bio = "Simply famous, known for a lot, example Maleficent",
                             ProfilePictureUrl = "http://dotnethow.net/images/actors/actor-3.jpeg"
                         },
                         new Actor()
                         {
-                            FullName = "Actor 4",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Jim Carrey",
+                            Bio = "The Grinch, The Mask, Truman Show, and alot more",
                             ProfilePictureUrl = "http://dotnethow.net/images/actors/actor-4.jpeg"
                         },
                         new Actor()
                         {
-                            FullName = "Actor 5",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Will Smith",
+                            Bio = "Men In Black, no need to say more.",
                             ProfilePictureUrl = "http://dotnethow.net/images/actors/actor-5.jpeg"
                         }
                     });
@@ -99,33 +99,33 @@ namespace eTickets.Data
                     {
                         new Producer()
                         {
-                            FullName = "Producer 1",
-                            Bio = "This is the Bio of the first actor",
+                            FullName = "Frank Marshall",
+                            Bio = "Indiana Jones producer",
                             ProfilePictureUrl = "http://dotnethow.net/images/producers/producer-1.jpeg"
 
                         },
                         new Producer()
                         {
-                            FullName = "Producer 2",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Steven Spielberg",
+                            Bio = "Schindlers List, Jurassic Park and much more",
                             ProfilePictureUrl = "http://dotnethow.net/images/producers/producer-2.jpeg"
                         },
                         new Producer()
                         {
-                            FullName = "Producer 3",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Quentin Tarantino",
+                            Bio = "Pulp Fiction, Django Unchained, Inglorious Basterds and more",
                             ProfilePictureUrl = "http://dotnethow.net/images/producers/producer-3.jpeg"
                         },
                         new Producer()
                         {
-                            FullName = "Producer 4",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Spike Lee",
+                            Bio = "Simply known producer    ",
                             ProfilePictureUrl = "http://dotnethow.net/images/producers/producer-4.jpeg"
                         },
                         new Producer()
                         {
-                            FullName = "Producer 5",
-                            Bio = "This is the Bio of the second actor",
+                            FullName = "Geoffrey Rush",
+                            Bio = "Pirates of the Caribbean and more",
                             ProfilePictureUrl = "http://dotnethow.net/images/producers/producer-5.jpeg"
                         }
                     });
@@ -139,7 +139,7 @@ namespace eTickets.Data
                         new Movie()
                         {
                             Name = "Life",
-                            Description = "This is the Life movie description",
+                            Description = "A team of scientists aboard the International Space Station discover a rapidly evolving life form that caused extinction on Mars and now threatens all life on Earth.\r\n\r\n",
                             Price = 39.50,
                             ImageUrl = "http://dotnethow.net/images/movies/movie-3.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
@@ -151,7 +151,7 @@ namespace eTickets.Data
                         new Movie()
                         {
                             Name = "The Shawshank Redemption",
-                            Description = "This is the Shawshank Redemption description",
+                            Description = "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
                             Price = 29.50,
                             ImageUrl = "http://dotnethow.net/images/movies/movie-1.jpeg",
                             StartDate = DateTime.Now,
@@ -163,7 +163,7 @@ namespace eTickets.Data
                         new Movie()
                         {
                             Name = "Ghost",
-                            Description = "This is the Ghost movie description",
+                            Description = "After a young man is murdered, his spirit stays behind to warn his lover of impending danger, with the help of a reluctant psychic.",
                             Price = 39.50,
                             ImageUrl = "http://dotnethow.net/images/movies/movie-4.jpeg",
                             StartDate = DateTime.Now,
@@ -175,7 +175,7 @@ namespace eTickets.Data
                         new Movie()
                         {
                             Name = "Race",
-                            Description = "This is the Race movie description",
+                            Description = "Jesse Owens' quest to become the greatest track and field athlete in history thrusts him onto the world stage of the 1936 Olympics, where he faces off against Adolf Hitler's vision of Aryan supremacy.",
                             Price = 39.50,
                             ImageUrl = "http://dotnethow.net/images/movies/movie-6.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
@@ -187,7 +187,7 @@ namespace eTickets.Data
                         new Movie()
                         {
                             Name = "Scoob",
-                            Description = "This is the Scoob movie description",
+                            Description = "Scooby and the gang face their most challenging mystery ever.",
                             Price = 39.50,
                             ImageUrl = "http://dotnethow.net/images/movies/movie-7.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
