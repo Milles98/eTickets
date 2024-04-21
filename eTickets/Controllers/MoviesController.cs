@@ -1,5 +1,6 @@
 ﻿using eTickets.Data;
 using eTickets.Data.Services;
+using eTickets.Models;
 using eTickets.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -125,6 +126,24 @@ namespace eTickets.Controllers
             }
 
             await _service.UpdateMovieAsync(movie);
+            return RedirectToAction(nameof(Index));
+        }
+
+        //GET: Movies/Delete/1
+        public async Task<IActionResult> Delete(int id)
+        {
+            var movieDetails = await _service.GetMovieByIdAsync(id);
+            if (movieDetails == null) return View("NotFound");
+
+            return View(movieDetails);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id, Movie movie)
+        {
+            if (id != movie.Id) return View("NotFound");
+
+            await _service.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
     }
