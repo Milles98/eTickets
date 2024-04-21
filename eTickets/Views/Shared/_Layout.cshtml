@@ -23,20 +23,18 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Movies" asp-action="Index"><i class="bi bi-film"></i> Movies</a>
                         </li>
 
-                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
-                        {
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">
                                     <i class="bi bi-gear"></i> Management
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" asp-controller="Cinemas" asp-action="Index"><i class="bi bi-camera-reels"></i> Cinemas</a>
-                                    <a class="dropdown-item" asp-controller="Producers" asp-action="Index"><i class="bi bi-headset"></i> Producers</a>
-                                    <a class="dropdown-item" asp-controller="Actors" asp-action="Index"><i class="bi bi-person-square"></i> Actors</a>
+                                    <a class="dropdown-item" asp-controller="Cinemas" asp-action="Index"> <i class="bi bi-camera-reels"></i> Cinemas</a>
+                                    <a class="dropdown-item" asp-controller="Producers" asp-action="Index"> <i class="bi bi-headset"></i> Producers</a>
+                                    <a class="dropdown-item" asp-controller="Actors" asp-action="Index"> <i class="bi bi-person-square"></i> Actors</a>
                                 </div>
                             </li>
-                        }
 
                     </ul>
 
@@ -66,11 +64,9 @@
             &copy; 2021 - eTickets
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>
