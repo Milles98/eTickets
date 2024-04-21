@@ -1,6 +1,6 @@
 ﻿using eTickets.Models;
 
-namespace eTickets.Data.Services
+namespace Library.Services.Interfaces
 {
     public interface IOrdersService
     {

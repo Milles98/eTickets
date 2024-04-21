@@ -1,7 +1,9 @@
-﻿using eTickets.Models;
+﻿using eTickets.Data;
+using eTickets.Models;
+using Library.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace eTickets.Data.Services
+namespace Library.Services
 {
     public class OrdersService : IOrdersService
     {

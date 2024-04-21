@@ -1,8 +1,10 @@
-﻿using eTickets.Data.Base;
+﻿using eTickets.Data;
+using eTickets.Data.Base;
 using eTickets.Models;
+using Library.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace eTickets.Data.Services
+namespace Library.Services
 {
     public class ActorsService : EntityBaseRepository<Actor>, IActorsService
     {
