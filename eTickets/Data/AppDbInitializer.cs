@@ -50,6 +50,12 @@ namespace eTickets.Data
                             Logo = "http://dotnethow.net/images/cinemas/cinema-5.jpeg",
                             Description = "Has all the scary movies you dare to watch."
                         },
+                        new Cinema()
+                        {
+                            Name = "Heron City",
+                            Logo = "https://www.fastighetsvarlden.se/wp-content/uploads/2011/03/Kvadraten2.jpg",
+                            Description = "The biggest cinema in Sweden"
+                        }
                     });
                     context.SaveChanges();
                 }
@@ -163,6 +169,12 @@ namespace eTickets.Data
                             FullName = "Geoffrey Rush",
                             Bio = "Pirates of the Caribbean and more",
                             ProfilePictureUrl = "http://dotnethow.net/images/producers/producer-5.jpeg"
+                        },
+                        new Producer()
+                        {
+                            FullName = "Christopher Nolan",
+                            Bio = "Inception, Interstellar, The Dark Knight and more",
+                            ProfilePictureUrl = "https://cdn.britannica.com/37/255737-050-9BB3FEDA/Christopher-Nolan-Movie-film-director-Oppenheimer-UK-premiere-2023.jpg"
                         }
                     });
                     context.SaveChanges();
@@ -182,6 +194,30 @@ namespace eTickets.Data
                             EndDate = DateTime.Now.AddDays(30),
                             CinemaId = 1,
                             ProducerId = 1,
+                            MovieCategory = MovieCategory.Action
+                        },
+                        new Movie()
+                        {
+                            Name = "The Dark Knight",
+                            Description = "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+                            Price = 199.50,
+                            ImageUrl = "https://m.media-amazon.com/images/I/91KkWf50SoL._AC_UF1000,1000_QL80_.jpg",
+                            StartDate = DateTime.Now.AddDays(-10),
+                            EndDate = DateTime.Now.AddDays(15),
+                            CinemaId = 6,
+                            ProducerId = 6,
+                            MovieCategory = MovieCategory.Action
+                        },
+                        new Movie()
+                        {
+                            Name = "Pulp Fiction",
+                            Description = "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+                            Price = 99.50,
+                            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+                            StartDate = DateTime.Now.AddDays(3),
+                            EndDate = DateTime.Now.AddDays(10),
+                            CinemaId = 6,
+                            ProducerId = 3,
                             MovieCategory = MovieCategory.Action
                         },
                         new Movie()
@@ -348,6 +384,41 @@ namespace eTickets.Data
                         {
                             ActorId = 5,
                             MovieId = 6
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 6,
+                            MovieId = 6
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 6,
+                            MovieId = 7
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 7,
+                            MovieId = 7
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 8,
+                            MovieId = 7
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 9,
+                            MovieId = 7
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 10,
+                            MovieId = 7
+                        },
+                        new Actor_Movie()
+                        {
+                            ActorId = 11,
+                            MovieId = 7
                         },
                     });
                     context.SaveChanges();
