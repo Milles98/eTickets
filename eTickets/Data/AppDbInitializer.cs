@@ -60,6 +60,42 @@ namespace eTickets.Data
                     {
                         new Actor()
                         {
+                            FullName = "Tom Hanks",
+                            Bio = "Famous for Forrest Gump, Cast Away, and much more",
+                            ProfilePictureUrl = "https://media.themoviedb.org/t/p/w500/xndWFsBlClOJFRdhSt4NBwiPq2o.jpg"
+                        },
+                        new Actor()
+                        {
+                            FullName = "Morgan Freeman",
+                            Bio = "Famous for Shawshank Redemption, Bruce Almighty, and much more",
+                            ProfilePictureUrl = "https://m.media-amazon.com/images/M/MV5BMTc0MDMyMzI2OF5BMl5BanBnXkFtZTcwMzM2OTk1MQ@@._V1_FMjpg_UX1000_.jpg"
+                        },
+                        new Actor()
+                        {
+                            FullName = "Brad Pitt",
+                            Bio = "Famous for Fight Club, Troy, and much more",
+                            ProfilePictureUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/1200px-Brad_Pitt_2019_by_Glenn_Francis.jpg"
+                        },
+                        new Actor()
+                        {
+                            FullName = "Leonardo DiCaprio",
+                            Bio = "Famous for Titanic, Inception, and much more",
+                            ProfilePictureUrl = "https://cdn.britannica.com/65/227665-050-D74A477E/American-actor-Leonardo-DiCaprio-2016.jpg"
+                        },
+                        new Actor()
+                        {
+                            FullName = "Johnny Depp",
+                            Bio = "Famous for Pirates of the Caribbean, Edward Scissorhands, and much more",
+                            ProfilePictureUrl = "https://m.media-amazon.com/images/M/MV5BOTBhMTI1NDQtYmU4Mi00MjYyLTk5MjEtZjllMDkxOWY3ZGRhXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_.jpg"
+                        },
+                        new Actor()
+                        {
+                            FullName = "Ella Purnell",
+                            Bio = "Famous for Fallout",
+                            ProfilePictureUrl = "https://m.media-amazon.com/images/M/MV5BN2UxMTFkNGYtNDUyNy00ZGUzLWE1MzMtM2QxZGRlY2I0MmUyXkEyXkFqcGdeQXVyMTI2Nzk2MjQ1._V1_.jpg"
+                        },
+                        new Actor()
+                        {
                             FullName = "Matt LeBlanc",
                             Bio = "One of the stars of Friends",
                             ProfilePictureUrl = "http://dotnethow.net/images/actors/actor-1.jpeg"
@@ -138,9 +174,21 @@ namespace eTickets.Data
                     {
                         new Movie()
                         {
+                            Name = "Fallout Episode 1-8",
+                            Description = "In a future, post-apocalyptic Los Angeles brought about by nuclear decimation, citizens must live in underground bunkers to protect themselves from radiation, mutants and bandits.",
+                            Price = 399.50,
+                            ImageUrl = "https://m.media-amazon.com/images/M/MV5BZjQ0YjAyNWQtMjRjMC00NzMxLTlkNjEtYWQzNmQwNGRlMGJkXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg",
+                            StartDate = DateTime.Now.AddDays(-10),
+                            EndDate = DateTime.Now.AddDays(30),
+                            CinemaId = 1,
+                            ProducerId = 1,
+                            MovieCategory = MovieCategory.Action
+                        },
+                        new Movie()
+                        {
                             Name = "Life",
                             Description = "A team of scientists aboard the International Space Station discover a rapidly evolving life form that caused extinction on Mars and now threatens all life on Earth.\r\n\r\n",
-                            Price = 39.50,
+                            Price = 79.50,
                             ImageUrl = "http://dotnethow.net/images/movies/movie-3.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(10),
@@ -152,7 +200,7 @@ namespace eTickets.Data
                         {
                             Name = "The Shawshank Redemption",
                             Description = "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
-                            Price = 29.50,
+                            Price = 89.50,
                             ImageUrl = "http://dotnethow.net/images/movies/movie-1.jpeg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(3),
@@ -164,7 +212,7 @@ namespace eTickets.Data
                         {
                             Name = "Ghost",
                             Description = "After a young man is murdered, his spirit stays behind to warn his lover of impending danger, with the help of a reluctant psychic.",
-                            Price = 39.50,
+                            Price = 49.50,
                             ImageUrl = "http://dotnethow.net/images/movies/movie-4.jpeg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(7),
@@ -176,7 +224,7 @@ namespace eTickets.Data
                         {
                             Name = "Race",
                             Description = "Jesse Owens' quest to become the greatest track and field athlete in history thrusts him onto the world stage of the 1936 Olympics, where he faces off against Adolf Hitler's vision of Aryan supremacy.",
-                            Price = 39.50,
+                            Price = 119.50,
                             ImageUrl = "http://dotnethow.net/images/movies/movie-6.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-5),
@@ -188,7 +236,7 @@ namespace eTickets.Data
                         {
                             Name = "Scoob",
                             Description = "Scooby and the gang face their most challenging mystery ever.",
-                            Price = 39.50,
+                            Price = 139.50,
                             ImageUrl = "http://dotnethow.net/images/movies/movie-7.jpeg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-2),
@@ -199,8 +247,8 @@ namespace eTickets.Data
                         new Movie()
                         {
                             Name = "Cold Soles",
-                            Description = "This is the Cold Soles movie description",
-                            Price = 39.50,
+                            Description = "Paul is an actor who feels bogged down by his participation in a production of Chekov's play, Vanya (PARODY).",
+                            Price = 69.50,
                             ImageUrl = "http://dotnethow.net/images/movies/movie-8.jpeg",
                             StartDate = DateTime.Now.AddDays(3),
                             EndDate = DateTime.Now.AddDays(20),
@@ -226,7 +274,6 @@ namespace eTickets.Data
                             ActorId = 3,
                             MovieId = 1
                         },
-
                          new Actor_Movie()
                         {
                             ActorId = 1,
@@ -237,7 +284,6 @@ namespace eTickets.Data
                             ActorId = 4,
                             MovieId = 2
                         },
-
                         new Actor_Movie()
                         {
                             ActorId = 1,
@@ -253,8 +299,6 @@ namespace eTickets.Data
                             ActorId = 5,
                             MovieId = 3
                         },
-
-
                         new Actor_Movie()
                         {
                             ActorId = 2,
@@ -270,8 +314,6 @@ namespace eTickets.Data
                             ActorId = 4,
                             MovieId = 4
                         },
-
-
                         new Actor_Movie()
                         {
                             ActorId = 2,
@@ -292,8 +334,6 @@ namespace eTickets.Data
                             ActorId = 5,
                             MovieId = 5
                         },
-
-
                         new Actor_Movie()
                         {
                             ActorId = 3,
