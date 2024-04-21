@@ -7,14 +7,23 @@ The solution is divided into two main projects:
 2.	Library: This is a class library project that contains service classes and interfaces used by the eTickets project. It helps in maintaining a clean separation of concerns and promotes code reusability.
 ### Key Dependencies
 The eTickets project uses several NuGet packages for various functionalities:
+
 •	Microsoft.AspNetCore.Identity.EntityFrameworkCore: Used for user identity management.
+
 •	Microsoft.EntityFrameworkCore: Used as the Object-Relational Mapper (ORM) for data access.
+
 •	Microsoft.EntityFrameworkCore.SqlServer: Used for SQL Server database provider.
+
 •	Microsoft.EntityFrameworkCore.Tools: Used for Entity Framework Core Tools.
+
 The Library project also uses some packages:
+
 •	Microsoft.AspNetCore.Http.Abstractions: Provides HTTP-related interfaces and types.
+
 •	Microsoft.AspNetCore.Identity.EntityFrameworkCore: Used for user identity management.
+
 •	Microsoft.AspNetCore.Mvc.ViewFeatures: Provides MVC view features.
+
 ### Services
 The Library project contains several service classes that encapsulate business logic related to different entities such as Movies, Orders, Actors, Producers, and Cinemas. These services are used by the controllers in the eTickets project to interact with the data.
 ### Controllers
