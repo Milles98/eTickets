@@ -1,6 +1,10 @@
 # eTickets MVC Project
 ### Overview
+
 eTickets is a .NET 8.0 MVC project that provides a platform for managing and purchasing movie tickets. It includes features such as account management, movie listings, and order processing.
+
+Azure: https://eticketsmovies.azurewebsites.net/
+
 ### Project Structure
 The solution is divided into two main projects:
 1.	eTickets: This is the main web application project. It contains the MVC architecture files (Models, Views, Controllers), and the necessary configuration files for the web application.
