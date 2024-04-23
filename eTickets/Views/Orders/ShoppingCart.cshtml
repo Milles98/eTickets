@@ -5,6 +5,13 @@
     ViewData["Title"] = "Shopping cart summary";
 }
 
+<style>
+    a.disabled {
+        pointer-events: none;
+        cursor: default;
+    }
+</style>
+
 <div class="row">
     <div class="col-md-8 offset-2">
         <div class="text-center">
@@ -57,7 +64,7 @@
 
         <div class="text-right">
             <div class="btn-group">
-                <a class="btn btn-outline-primary" asp-action="CompleteOrder">
+                <a class="btn btn-outline-primary disabled" asp-action="CompleteOrder">
                 Complete order
                 </a>
                 @* <div id="paypal-btn"></div> *@
