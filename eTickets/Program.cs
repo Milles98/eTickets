@@ -43,7 +43,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 AppDbInitializer.Seed(app);
-AppDbInitializer.SeedUsersAndRolesAsync(app).Wait();
+//AppDbInitializer.SeedUsersAndRolesAsync(app).Wait();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
