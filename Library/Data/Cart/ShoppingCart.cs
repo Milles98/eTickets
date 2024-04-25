@@ -17,6 +17,12 @@ namespace eTickets.Data.Cart
             _context = context;
         }
 
+        public async Task CompleteOrder()
+        {
+            // Clear the shopping cart
+            await ClearShoppingCartAsync();
+        }
+
         public static ShoppingCart GetShoppingCart(IServiceProvider services)
         {
             ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
