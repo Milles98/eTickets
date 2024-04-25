@@ -181,6 +181,7 @@ namespace eTickets.Data
                     });
                     context.SaveChanges();
                 }
+
                 //Movies
                 if (!context.Movies.Any())
                 {
@@ -188,10 +189,10 @@ namespace eTickets.Data
                     {
                         new Movie()
                         {
-                            Name = "Fallout Episode 1-8",
+                            Name = "4D Man",
                             Description = "In a future, post-apocalyptic Los Angeles brought about by nuclear decimation, citizens must live in underground bunkers to protect themselves from radiation, mutants and bandits.",
-                            Price = 399.50,
-                            ImageUrl = "https://m.media-amazon.com/images/M/MV5BZjQ0YjAyNWQtMjRjMC00NzMxLTlkNjEtYWQzNmQwNGRlMGJkXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg",
+                            Price = 99,
+                            ImageUrl = "https://freeclassicimages.com/images/4d%2dMan%2d01%2dmovie%2dposter.jpg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(30),
                             CinemaId = 1,
@@ -200,10 +201,10 @@ namespace eTickets.Data
                         },
                         new Movie()
                         {
-                            Name = "The Dark Knight",
+                            Name = "3 Stooges",
                             Description = "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-                            Price = 199.50,
-                            ImageUrl = "https://m.media-amazon.com/images/I/91KkWf50SoL._AC_UF1000,1000_QL80_.jpg",
+                            Price = 79,
+                            ImageUrl = "https://freeclassicimages.com/images/3stooges%2dmovie%2dmaniacs%2d1935%2dmovie%2dposter.jpg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(15),
                             CinemaId = 6,
@@ -212,10 +213,10 @@ namespace eTickets.Data
                         },
                         new Movie()
                         {
-                            Name = "Pulp Fiction",
+                            Name = "Le Monstre Aux Abois",
                             Description = "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
                             Price = 99.50,
-                            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+                            ImageUrl = "https://freeclassicimages.com/images/4d%2dMan%2d03%2dmovie%2dposter.jpg",
                             StartDate = DateTime.Now.AddDays(3),
                             EndDate = DateTime.Now.AddDays(10),
                             CinemaId = 6,
@@ -224,10 +225,10 @@ namespace eTickets.Data
                         },
                         new Movie()
                         {
-                            Name = "Life",
+                            Name = "5 Element Kung Fu",
                             Description = "A team of scientists aboard the International Space Station discover a rapidly evolving life form that caused extinction on Mars and now threatens all life on Earth.\r\n\r\n",
                             Price = 79.50,
-                            ImageUrl = "http://dotnethow.net/images/movies/movie-3.jpeg",
+                            ImageUrl = "https://freeclassicimages.com/images/5%2dElement%2dKung%2dFu%2d01%2dmovie%2dposter.jpg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(10),
                             CinemaId = 3,
@@ -236,10 +237,10 @@ namespace eTickets.Data
                         },
                         new Movie()
                         {
-                            Name = "The Shawshank Redemption",
+                            Name = "The Invincible Boxer",
                             Description = "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
                             Price = 89.50,
-                            ImageUrl = "http://dotnethow.net/images/movies/movie-1.jpeg",
+                            ImageUrl = "https://freeclassicimages.com/images/5%2dFingers%2dOf%2dDeath%2d02%2dmovie%2dposter.jpg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(3),
                             CinemaId = 1,
@@ -248,10 +249,10 @@ namespace eTickets.Data
                         },
                         new Movie()
                         {
-                            Name = "Ghost",
+                            Name = "The 5-Man Army",
                             Description = "After a young man is murdered, his spirit stays behind to warn his lover of impending danger, with the help of a reluctant psychic.",
                             Price = 49.50,
-                            ImageUrl = "http://dotnethow.net/images/movies/movie-4.jpeg",
+                            ImageUrl = "https://freeclassicimages.com/images/5%2dMan%2dArmy%2d01%2dmovie%2dposter.jpg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(7),
                             CinemaId = 4,
@@ -260,10 +261,10 @@ namespace eTickets.Data
                         },
                         new Movie()
                         {
-                            Name = "Race",
-                            Description = "Jesse Owens' quest to become the greatest track and field athlete in history thrusts him onto the world stage of the 1936 Olympics, where he faces off against Adolf Hitler's vision of Aryan supremacy.",
+                            Name = "7 Faces of Dr.Lao",
+                            Description = "Dr.Laos' quest to become the greatest track and field athlete in history thrusts him onto the world stage of the 1936 Olympics, where he faces off against Adolf Hitler's vision of Aryan supremacy.",
                             Price = 119.50,
-                            ImageUrl = "http://dotnethow.net/images/movies/movie-6.jpeg",
+                            ImageUrl = "https://freeclassicimages.com/images/7%2dFaces%2dOf%2dDr%2dLao%2d01%2dmovie%2dposter.jpg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-5),
                             CinemaId = 1,
@@ -272,10 +273,10 @@ namespace eTickets.Data
                         },
                         new Movie()
                         {
-                            Name = "Scoob",
+                            Name = "7th Commandment",
                             Description = "Scooby and the gang face their most challenging mystery ever.",
                             Price = 139.50,
-                            ImageUrl = "http://dotnethow.net/images/movies/movie-7.jpeg",
+                            ImageUrl = "https://freeclassicimages.com/images/7th%2dCommandment%2d01%2dmovie%2dposter.jpg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-2),
                             CinemaId = 1,
@@ -284,10 +285,10 @@ namespace eTickets.Data
                         },
                         new Movie()
                         {
-                            Name = "Cold Soles",
+                            Name = "7-Man Army",
                             Description = "Paul is an actor who feels bogged down by his participation in a production of Chekov's play, Vanya (PARODY).",
                             Price = 69.50,
-                            ImageUrl = "http://dotnethow.net/images/movies/movie-8.jpeg",
+                            ImageUrl = "https://freeclassicimages.com/images/7%2dMan%2dArmy%2d01%2dmovie%2dposter.jpg",
                             StartDate = DateTime.Now.AddDays(3),
                             EndDate = DateTime.Now.AddDays(20),
                             CinemaId = 1,
