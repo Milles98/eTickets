@@ -3,12 +3,12 @@
 
 <style>
     .card {
-        height: 500px; /* Adjust as needed */
+        height: 525px; 
         width: 100%;
     }
 
     .card-img-top {
-        height: 200px; /* Adjust as needed */
+        height: 200px; 
         object-fit: cover;
     }
 </style>
@@ -19,9 +19,13 @@
         <div class="col-md-2 mb-3">
             <div class="card card-body shadow">
                 <img src="https://picsum.photos/200?random=@ad.Id" class="card-img-top" style="width: 250px;" alt="Ad image">
-                <h2>@ad.Title</h2>
+                <h3 class="mt-3">@ad.Title</h3>
                 <p>@ad.Description</p>
-                <p>@ad.Price</p>
+                <p>SEK: @ad.Price</p>
+                <div class="d-flex justify-content-between" style="position: absolute; bottom: 5px; left: 8px; right: 5px; width: 95%;">
+                    <a asp-controller="Ads" asp-action="Update" asp-route-id="@ad.Id" class="btn btn-success">Update</a>
+                    <a asp-controller="Ads" asp-action="Delete" asp-route-id="@ad.Id" class="btn btn-danger">Delete</a>
+                </div>
             </div>
         </div>
     }
