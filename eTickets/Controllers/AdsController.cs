@@ -28,5 +28,20 @@ namespace eTickets.Controllers
 
             return NotFound();
         }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var response = await _httpClient.GetAsync($"/Ads/{id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                var ad = JsonSerializer.Deserialize<Advertisement>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+                return View(ad);
+            }
+
+            return NotFound();
+        }
     }
 }
