@@ -1,3 +1,4 @@
+using eTickets.Controllers;
 using eTickets.Data;
 using eTickets.Data.Cart;
 using eTickets.Models;
@@ -21,6 +22,11 @@ builder.Services.AddScoped<IOrdersService, OrdersService>();
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped(sc => ShoppingCart.GetShoppingCart(sc));
+
+builder.Services.AddHttpClient<AdsController>(client =>
+{
+    client.BaseAddress = new Uri("https://advertisementapi.azurewebsites.net");
+});
 
 //builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 builder.Services.AddMemoryCache();

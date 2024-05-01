@@ -1,0 +1,30 @@
+﻿@using Library.Models
+@model List<Advertisement>
+
+<style>
+    .card {
+        height: 500px; /* Adjust as needed */
+        width: 100%;
+    }
+
+    .card-img-top {
+        height: 200px; /* Adjust as needed */
+        object-fit: cover;
+    }
+</style>
+
+<div class="row">
+    @foreach (var ad in Model)
+    {
+        <div class="col-md-2 mb-3">
+            <div class="card card-body shadow">
+                <img src="https://picsum.photos/200?random=@ad.Id" class="card-img-top" style="width: 250px;" alt="Ad image">
+                <h2>@ad.Title</h2>
+                <p>@ad.Description</p>
+                <p>@ad.Price</p>
+            </div>
+        </div>
+    }
+</div>
+
+
