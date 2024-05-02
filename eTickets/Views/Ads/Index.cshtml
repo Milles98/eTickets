@@ -13,6 +13,17 @@
     }
 </style>
 
+@if (TempData["Message"] != null)
+{
+    <div class="alert @TempData["MessageClass"]">
+        @TempData["Message"]
+    </div>
+}
+
+<div class="container">
+    <a asp-controller="Ads" asp-action="Login" class="btn btn-primary">Login</a>
+</div>
+
 <div class="row">
     @foreach (var ad in Model)
     {
