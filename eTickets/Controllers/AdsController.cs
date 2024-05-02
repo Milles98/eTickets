@@ -10,23 +10,22 @@ namespace eTickets.Controllers
 {
     public class AdsController : Controller
     {
-        private readonly HttpClient _httpClient;
         private string _jwtToken;
+        private readonly HttpClient _httpClient;
 
         public AdsController(IHttpClientFactory httpClientFactory)
         {
-            _httpClient = httpClientFactory.CreateClient(nameof(AdsController));
+            _httpClient = httpClientFactory.CreateClient();
+            _httpClient.BaseAddress = new Uri("https://advertisementapi.azurewebsites.net");
         }
 
-        private async Task Login()
+        private async Task AdminLogin()
         {
             var loginModel = new LoginModel { Username = "AdsAdmin", Password = "AdsAdminPassword123!" };
             var loginJson = JsonSerializer.Serialize(loginModel);
             var loginData = new StringContent(loginJson, Encoding.UTF8, "application/json");
-            var loginResponse = await _httpClient.PostAsync("https://advertisementapi.azurewebsites.net/Login", loginData);
-            var loginResultJson = await loginResponse.Content.ReadAsStringAsync();
-            var loginResult = JsonSerializer.Deserialize<LoginResult>(loginResultJson);
-            _jwtToken = loginResult.Token;
+            var loginResponse = await _httpClient.PostAsync("/Ads/Login", loginData);
+            _jwtToken = await loginResponse.Content.ReadAsStringAsync();
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _jwtToken);
         }
 
@@ -63,6 +62,8 @@ namespace eTickets.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(Advertisement ad)
         {
+            await AdminLogin();
+
             var json = JsonSerializer.Serialize(ad);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -74,5 +75,37 @@ namespace eTickets.Controllers
             }
             return View(ad);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> UserLogin(LoginModel loginModel)
+        {
+            var loginJson = JsonSerializer.Serialize(loginModel);
+            var loginData = new StringContent(loginJson, Encoding.UTF8, "application/json");
+            var loginResponse = await _httpClient.PostAsync("/Ads/Login", loginData);
+
+            if (loginResponse.IsSuccessStatusCode)
+            {
+                _jwtToken = await loginResponse.Content.ReadAsStringAsync();
+                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _jwtToken);
+
+                TempData["Message"] = "Login successful!";
+                TempData["MessageClass"] = "alert-success";
+            }
+            else
+            {
+                TempData["Message"] = "Login failed!";
+                TempData["MessageClass"] = "alert-danger";
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+
     }
 }
